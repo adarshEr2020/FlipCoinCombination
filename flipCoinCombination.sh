@@ -13,6 +13,24 @@ do
 	else
 		tails=$(($tails+1))
 	fi
+	flipp=$((RANDOM%4))
+	case $flipp in
+		0) hh=$(($hh+1))
+			;;
+		1) ht=$(($ht+1))
+			;;
+		2) th=$(($th+1))
+			;;
+		3) tt=$(($tt+1))
+			;;
+		*) echo "went wrong"
+			;;
+	esac
 done
-echo "Number of head win :"$heads
-echo "Number od tail win :"$tails
+echo "Number of head win :" $heads
+echo "Number of tail win :" $tails
+echo "Number of hh combination " $hh
+echo "Number of ht combination " $ht
+echo "Number of th combination " $th
+echo "Number of tt combination " $tt
+
